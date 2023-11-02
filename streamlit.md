@@ -233,5 +233,7 @@ res3 = add(3,20)
 res4 = add(1,-2)
 
 st.cache_data.clear()
-
 ```
+
+### Formulaire, Tabs et Colonnes
+Les formulaires ne passent que sur une version supérieur à 0.81
