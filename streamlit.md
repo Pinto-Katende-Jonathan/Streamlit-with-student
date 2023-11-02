@@ -156,6 +156,10 @@ st.sidebar.button("click")
 # ...
 ```
 
+### Event
+
+#### Button click
+
 ```python
 # Exemple 1
 # ------------------------------
@@ -233,6 +237,7 @@ res3 = add(3,20)
 res4 = add(1,-2)
 
 st.cache_data.clear()
+
 ```
 
 ### Formulaire, Tabs et Colonnes
@@ -254,6 +259,19 @@ col1, col2, col3 = st.columns([3,1,1]) #col 1 60% width
 >>>     st.write('This is column 1')
 
 # Au lieu de col1.write, avec with, on peut écrire les commandes habituelles (st.)
+```
+
++ **Tabs**
+
+```Python
+# Insert containers separated into tabs:
+>>> tab1, tab2 = st.tabs(["Tab 1", "Tab2"])
+>>> tab1.write("this is tab 1")
+>>> tab2.write("this is tab 2")
+
+# You can also use "with" notation:
+>>> with tab1:
+>>>   st.radio('Select one:', [1, 2])
 ```
 
 + **Formulaire**
