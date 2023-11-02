@@ -140,3 +140,18 @@ st.snow()
 st.camera_input("一二三,茄子!")
 ```
 
+### Sidebar
+
+Pour la sidebar, tous les champs sont identiques aux précédents, à la seule condition de précéder par ```st.sidebar.```
+
+**Cas d'utilisation**
+
+```python
+
+# Sidebar title
+st.sidebar.title("Bienvenue sur la sidebar")
+
+st.sidebar.text_input("Sidebar text input")
+st.sidebar.button("click")
+# ...
+```
