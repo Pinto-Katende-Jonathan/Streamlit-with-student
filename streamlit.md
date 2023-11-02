@@ -79,3 +79,64 @@ st.audio(data)
 st.video(data) 
 ```
 Idem pour les vidéos et les audios.
+
+#### Les inputs
+```python
+# checkbox
+st.checkbox("Accepter")
+
+# Button
+st.button("click")
+
+# radio
+st.radio("Genre", ["masculin", "feminin","neutre"])
+
+# selectbox
+st.selectbox("Genre", ["masculin", "feminin","neutre"])
+
+# Multiselect
+st.multiselect("Genre", ["masculin", "feminin","neutre"])
+
+# slider (str, min, max, step)
+st.slider("Genre", 0, 10, 2)
+
+# select_slider
+st.radio("Niveau", ["Primaire", "secondaire","supérieur"])
+
+# nombre
+st.number_input("choisi un nombre", 0, 12)
+
+# Text
+st.text_input("Entre un text")
+
+# Textarea
+st.text_area("Entre un commentaire")
+
+# Date
+st.date_input("choisi une date")
+
+# Temps
+st.time_input("Entre une date")
+
+# Fichier
+st.file_upload('Drag and drop')
+
+# Color Picker
+st.color_picker('color')
+
+# Progress Bar
+st.progress(90)
+
+# Loader
+st.spinner("Chargement...")
+
+# Ballons
+st.balloons()
+
+# Snow
+st.snow()
+
+# Camera
+st.camera_input("一二三,茄子!")
+```
+
