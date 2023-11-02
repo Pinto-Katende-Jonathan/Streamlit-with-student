@@ -156,10 +156,6 @@ st.sidebar.button("click")
 # ...
 ```
 
-### Event
-
-#### Button click
-
 ```python
 # Exemple 1
 # ------------------------------
@@ -169,3 +165,44 @@ if button1:
     st.write("Hello streamlit")
 
 #-------------------------------
+
+# Exemple 2
+#-------------------------------
+pref = st.checkbox("Aimez-vous python?")
+button2 = st.button("Test")
+
+if button2:
+    st.write(pref)
+#-------------------------------
+
+# Exemple 3
+#-------------------------------
+if button2:
+    if pref:
+        st.write("J\'aime Python")
+    else:
+        st.write("Pas du tout")
+#-------------------------------
+
+# Exemple 4
+#-------------------------------
+radio = st.radio("Statut", ["M.", "Mme"], "Mme")
+
+button = st.button("Test")
+
+if button:
+    if radio == "M.":
+        st.write("Bonjour Monsieur")
+    else:
+        st.write("Bonjour Madame")
+#-------------------------------
+
+# Exemple 5
+#-------------------------------
+langages = st.multiselect("Quel langage avez-vous déjà utililisé?", ["PHP", "Python", "Ruby", "R", "Javascrit", "Html", "CSS"])
+
+if st.button("Click"):
+    langages
+    st.write(langages[0])
+#-------------------------------
+```
