@@ -70,3 +70,12 @@ st.latex(r''' delta = b^2 - 4ac''')
 # code
 st.code('for i in range(8): foo()')
 ```
+
+### Partie 2
+```python
+#image
+st.image("img.png")
+st.audio(data)
+st.video(data) 
+```
+Idem pour les vidéos et les audios.
