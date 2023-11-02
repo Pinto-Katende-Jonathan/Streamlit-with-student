@@ -277,5 +277,13 @@ col1, col2, col3 = st.columns([3,1,1]) #col 1 60% width
 + **Formulaire**
 
 ```python
+with st.form(key='my_form'):
+    username = st.text_input('Username')
+    password = st.text_input('Password')
+    age = st.date_input("Date de naissance")
 
+    validate = st.form_submit_button('Login')
+
+    if validate:
+        st.write(f"Hello {username}, ta date de naissance est {age}")
 ```
