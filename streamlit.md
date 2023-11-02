@@ -155,3 +155,17 @@ st.sidebar.text_input("Sidebar text input")
 st.sidebar.button("click")
 # ...
 ```
+
+### Event
+
+#### Button click
+
+```python
+# Exemple 1
+# ------------------------------
+button1 = st.button("Envoyez")
+
+if button1:
+    st.write("Hello streamlit")
+
+#-------------------------------
