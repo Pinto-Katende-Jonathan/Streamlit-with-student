@@ -218,3 +218,20 @@ st.dataframe(data)
 st.table(data.iloc[0:10])
 st.line_chart(df)
 ```
+
+### Optimize performance
+Pour l'optimisation, on utilise le décorateur @st.cache_data, et pour supprimer le cache, on utilise st.cache_data.clear().
+
+```python
+@st.cache_data
+def add(a,b): 
+    return a+b
+
+res1 = add(1,2)
+res2 = add(5,2)
+res3 = add(3,20)
+res4 = add(1,-2)
+
+st.cache_data.clear()
+
+```
