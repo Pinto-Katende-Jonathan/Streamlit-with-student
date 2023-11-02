@@ -255,3 +255,9 @@ col1, col2, col3 = st.columns([3,1,1]) #col 1 60% width
 
 # Au lieu de col1.write, avec with, on peut écrire les commandes habituelles (st.)
 ```
+
++ **Formulaire**
+
+```python
+
+```
