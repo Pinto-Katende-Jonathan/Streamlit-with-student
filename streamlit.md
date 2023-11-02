@@ -206,3 +206,15 @@ if st.button("Click"):
     st.write(langages[0])
 #-------------------------------
 ```
+
+### Excel
+```python
+import pandas as pd
+import streamlit as st
+
+data = pd.read_excel("data.xlsx")
+
+st.dataframe(data)
+st.table(data.iloc[0:10])
+st.line_chart(df)
+```
