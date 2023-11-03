@@ -386,3 +386,9 @@ st.json(y, expended = True)
 # expended = True : Permet d'ouvrir le json par défaut
 ```
 
+### Barre de Navigation (Navbar)
+
+Pour commencer, installez **streamlit_option_menu**.
+
+Nous allons nous servir de deux exemples, un sur la sidebar et l'autre la page principale.
+
