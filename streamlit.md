@@ -1,3 +1,4 @@
+Auteur : **Pinto Katende Jonathan**
 # Les bases de Streamlit
 
 ### Installation de Streamlit via cmd
