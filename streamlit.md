@@ -277,6 +277,7 @@ col1, col2, col3 = st.columns([3,1,1]) #col 1 60% width
 + **Formulaire**
 
 ```python
+# Méthode 1
 with st.form(key='my_form'):
     username = st.text_input('Username')
     password = st.text_input('Password')
@@ -286,4 +287,10 @@ with st.form(key='my_form'):
 
     if validate:
         st.write(f"Hello {username}, ta date de naissance est {age}")
+
+# Méthode 2
+form2 = st.form(key='job_form')
+name = form2.text_input('username')
+job_type = form2.selectbox('job', ["Dev", "Data Scientist", "Doctor"])
+submition = form2.form_submit_button('Send')
 ```
