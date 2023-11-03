@@ -338,3 +338,28 @@ div.css-1r6slb0.e1tzin5v2{
 }
 ```
 
+### Dataframe, Table, Metric et json
+
++ **Dataframe**
+
+Il nous permet d'afficher des tableaux à deux dimensions (généralement excel).
+
+```python
+import pandas as pd
+import numpy as np
+import streamlit as st
+
+df = pd.DataFrame(
+    np.random.randn(50, 20),
+    columns = ["col" + str(i) for i in range(20)]
+)
+
+st.dataframe(df, width = 400, height = 400)
+```
+
+avec un dataFrame, on peut avoir le contrôle sur le tableau (width, height), ce qui n'est pas le cas avec table.
+
+```st.table(df)```
+
++ **metric**
+
