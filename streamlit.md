@@ -294,3 +294,46 @@ name = form2.text_input('username')
 job_type = form2.selectbox('job', ["Dev", "Data Scientist", "Doctor"])
 submition = form2.form_submit_button('Send')
 ```
+
+## Partie 3 : Streamlit avancé
+
+### Custom CSS
+Pour appliquer le style (css) sur les éléments streamlit, il y a plusieures manières.
+Parmi les moyens actuels, voici le top :
+
+1. Créez un fichier ***style.css***
+2. Créez le fichier python qui contiendra le style
+
+```python
+import streamlit as st
+
+with open('style.css') as css:
+    st.markdown(f'<style>{css.read()}</style>', unsafe_allow_html=True)
+
+col1, col2, col3 = st.columns(3)
+col1.metric('Temperature', "70 °F", "1.2 °F")
+col1.metric('Wind', "9 mph", "-8%")
+col1.metric('Humidity', "86%", "4%")
+```
+
+Pour appliquer le css sur nos cards, voici la procédure :
+
+- Lancer le serveur streamlit
+- Sur le navigateur, ouvrez l'inspecteur ('clique droit, inspecter')
+- Identifiez chaque card, vous verrez la classe associée aux card.
+
+![Inspection sur navigateur](image.png)
+
+- Avec la classe identifiée, vous pouvez appliquer le css dans le fichier style.css
+
+En voici une illustration : 
+
+```css
+div.css-1r6slb0.e1tzin5v2{
+    background-color : #EEEEEE;
+    border : 1px solid #FF5733;
+    padding : 5% 5% 5% 10%;
+    border-radius : 10px;
+}
+```
+
