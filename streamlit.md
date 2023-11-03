@@ -363,3 +363,26 @@ avec un dataFrame, on peut avoir le contrôle sur le tableau (width, height), ce
 
 + **metric**
 
+Il s'agit tout simplement d'une card.
+
+```python
+st.metric("Stock", value = "3370.52", delta = "19")
+```
+
++ **Json**
+
+c'est l'affichage des json
+
+```python
+import json
+import streamlit as st
+
+x =  '{ "name":"John", "age":30, "city":"New York"}'
+
+# parse x to json:
+y = json.loads(x)
+
+st.json(y, expended = True)
+# expended = True : Permet d'ouvrir le json par défaut
+```
+
