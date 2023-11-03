@@ -392,3 +392,55 @@ Pour commencer, installez **streamlit_option_menu**.
 
 Nous allons nous servir de deux exemples, un sur la sidebar et l'autre la page principale.
 
+```python
+import streamlit as st
+from streamlit_option_menu import option_menu
+
+# Dans la sidebar
+with st.sidebar:
+    selected = option_menu(
+        #menu_title : title or None pour désactiver
+        menu_title = "Main Menu",
+        options =  ["Home", "About", "Contact"],
+    )
+
+if selected == "Home":
+    # Code associé
+    st.title(f'{selected} Page')
+elif selected == "About":
+    # Code associé
+    st.title(f'{selected} Page')
+elif selected == "Contact":
+    # Code associé
+    st.title(f'{selected} Page')
+```
+
+En dehors de de la sidebar :
+
+```python
+import streamlit as st
+from streamlit_option_menu import option_menu
+
+selected = option_menu(
+        #menu_title : title or None pour désactiver
+        menu_title = None, #required
+        options =  ["Home", "About", "Contact"], #required
+        icons = ["house", "book", "envelope"], #optional
+        menu_icon = "cast", #optional
+        default_index = 0, #optional
+        orientation = "horizontal", #optional
+    )
+
+if selected == "Home":
+    # Code associé
+    st.title(f'{selected} Page')
+elif selected == "About":
+    # Code associé
+    st.title(f'{selected} Page')
+elif selected == "Contact":
+    # Code associé
+    st.title(f'{selected} Page')
+```
+
+Les iconnes proviennent de bootstrapp.
+
